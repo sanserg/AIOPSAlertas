@@ -30,7 +30,7 @@ public class AiopsEventsRest {
     {
         RetornoAPI retorno = new RetornoAPI();
         //System.out.println(evento.getSender().getName());
-        //System.out.println(new Gson().toJson(evento));
+        System.out.println(new Gson().toJson(evento));
         kafka.send(topico,null, new Gson().toJson(evento));
         retorno.setCodigoRetorno(200);
         retorno.setMensagem("Alerta processado com sucesso");
